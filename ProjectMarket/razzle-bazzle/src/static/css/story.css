@@ -1,0 +1,27 @@
+.story-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Coming Soon', cursive;
+   padding: 10px;
+   z-index: 100;
+    -webkit-box-shadow: 0px 1px 13px -1px rgba(0,0,0,0.47);
+-moz-box-shadow: 0px 1px 13px -1px rgba(0,0,0,0.47);
+box-shadow: 0px 1px 13px -1px rgba(0,0,0,0.47);
+}
+
+.card-text{
+text-align: center;
+font-size: 4rem;
+padding: 15px;
+background-color: rgb(240, 101, 67,0.490);
+border-radius: 6px;
+width: 480px;
+
+}

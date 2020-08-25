@@ -1,0 +1,24 @@
+.create-post a{
+    text-decoration:none;
+    color: black;
+}
+
+.post-page-root{
+    margin:auto;
+    margin-top: 10rem;
+    width:70%;
+    padding:10px;
+}
+
+.arrows-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrows-holder div{
+    font-size: 3rem;
+    padding:50px;
+    border-radius: 50%;
+    
+    background:cadetblue;
+}
