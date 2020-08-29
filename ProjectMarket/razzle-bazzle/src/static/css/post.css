@@ -1,0 +1,104 @@
+.post-page-root{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comapny-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comapny-header *{
+    text-align: center;
+    width: 100%;
+}
+.comapny-header a{
+    text-decoration:none;
+    color: black;
+}
+
+.post-body-root{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20%  80%;
+}
+
+.ese-text-wrapper h3{
+    color: rgba(110, 106, 111,1);
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(110, 106, 111,0.8);
+}
+
+.ese-text-wrapper pre{
+    font-size: 16px;
+    height: 500px;
+    padding: 10px;
+    overflow-x:scroll; 
+    overflow-x:hidden; 
+    white-space: pre-wrap; 
+    word-break: break-word;
+  
+ 
+}
+
+.post-files-wrapper{
+    position: fixed;
+    top: 30%;
+    left: 30%;
+   display: grid;
+   grid-template-columns: repeat(3,auto);
+   gap: 100px;
+   background-color:rgba(212, 210, 213,0.9);
+   border-radius: 10px;
+}
+
+.file-item{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    background: rgb(239, 239, 239,0.8);
+    border-radius: 10px;
+    cursor: pointer;
+    transition:  all 400ms ease;
+}
+
+.file-item:hover{
+    transform: scale(1.1);
+}
+
+.file-item img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.modal-root{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99999999;
+    outline: none;
+}
+
+.modal{
+    position: relative;
+    color: #3A3A3A;
+    outline: none;
+    background-color: #d3cfc5;
+    margin: 30px auto ;
+    max-width: 600px ;
+    top: 20%;
+}
+
+.modal .content{
+    position: relative;
+    max-width: 100%;
+}
