@@ -1,3 +1,4 @@
+
 .create-post a{
     text-decoration:none;
     color: black;
@@ -21,4 +22,11 @@
     border-radius: 50%;
     
     background:cadetblue;
+}
+
+
+.thumb-nail-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 50px;
 }

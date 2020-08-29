@@ -10,8 +10,8 @@ const modelSchema = new mongoose.Schema({
     message:{
         type:String,
         minlength:2
-    }
-
+    },
+    posts:[{type:mongoose.Schema.Types.ObjectId,ref:'Post'}] 
 })
 
 

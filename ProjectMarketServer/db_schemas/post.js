@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 
 const modelSchema = new mongoose.Schema({
-    author_name:{type:String,default:"Anonymous"},
+    author:{type:mongoose.Schema.Types.ObjectId,ref:'User'},
     rating:{
         type:Number,
         required:true,
@@ -20,7 +20,7 @@ const modelSchema = new mongoose.Schema({
         minlength:5
     },
     company:{type:mongoose.Schema.Types.ObjectId,ref:"Company"},
-    title:String,
+    create_on:{type:Date, default:Date.now},
     links: [{
         type:String,
     }],
@@ -36,9 +36,7 @@ const modelSchema = new mongoose.Schema({
       type: Date
     },
     admin_info:{
-      links:{
-          type:String
-      },
+      links:[{type:String}],
        comments:[{type:mongoose.Schema.Types.ObjectId, ref: "Comment"}]
     },
     comments:[{type:mongoose.Schema.Types.ObjectId, ref:"Comment"}]
