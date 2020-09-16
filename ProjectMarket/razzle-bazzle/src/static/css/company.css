@@ -1,0 +1,53 @@
+.home-company{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10vw 0 10vw;
+    margin-top: 6rem;
+  }
+  
+
+.companies-nail-container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 50px;
+}
+
+.company-thumb-nail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    padding: 20px;
+    background: rgb(174, 164, 191,0.4);
+    border-radius: 7px;
+    width: 200px;
+
+}
+
+/* .comapnyHeader{
+    text-align: center;    
+}
+.comapnyHeader a{
+    text-decoration:none;
+    color: black;
+}
+.company-thumb-rating{
+    margin-top: 20px;
+    margin-bottom: 20px;
+} */
+
+.company-page-header{
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.company-page-header img{
+    max-width: 300px;
+}
+
+.company-charts{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}

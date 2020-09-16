@@ -9,9 +9,13 @@ const modelSchema = new mongoose.Schema({
     },
     message:{
         type:String,
-        minlength:2
+        minlength:1
     },
-    posts:[{type:mongoose.Schema.Types.ObjectId,ref:'Post'}] 
+    created_on:{
+        type:Date,
+        default:Date.now
+    },
+    post:{type:mongoose.Schema.Types.ObjectId,ref:'Post'}
 })
 
 

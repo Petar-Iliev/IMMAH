@@ -32,6 +32,8 @@ server
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono&amp;display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">  
         ${
           assets.client.css
             ? `<link rel="stylesheet" href="${assets.client.css}">`

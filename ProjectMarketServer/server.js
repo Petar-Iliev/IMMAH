@@ -22,7 +22,7 @@ const app = express();
 
 const postRouter = require('./routes/post/postrouter');
 const userRouter = require('./routes/user/userrouter');
-
+const companyRouter = require('./routes/comapny/companyrouter');
 const PORT = process.env.PORT || 8000;
 
 app.use(cors());
@@ -34,6 +34,7 @@ app.use(fileUpload({
 
 app.use("/post",postRouter);
 app.use('/user',userRouter);
+app.use('/company',companyRouter);
 
 app.post("/test",async (req,res)=>{
  

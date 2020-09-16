@@ -28,7 +28,7 @@ class Home extends React.Component {
               </p>
               <div className="intro-links">
                 <Link to="/story" className="intro-link">Learn more</Link>
-                <Link to="/" className="intro-link">Sign up</Link>
+                <Link to="/create/post" className="intro-link">POST</Link>
               </div>
 
             </div>

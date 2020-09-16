@@ -18,9 +18,10 @@ function Login(){
         setPassword(e.target.value)
     }
 
-   async function handleSubmit(){
+   async function handleSubmit(e){
  
-      const data = await fetch('http://localhost:8000/user/login',
+    e.preventDefault();
+      await fetch('http://localhost:8000/user/login',
        {
            method:"POST",
            headers:{
@@ -30,32 +31,42 @@ function Login(){
        }
        )
         .then(resp=>resp.json())
+        .then(data=>{
+           if(!data.err){
+            setUser(data);
+           }
+           
+        })
         .catch(err=>{
             console.log(err);
         })
 
        
-         data.username ? setUser({data}) : alert(data.err);  
+      
     }
 
 
     return(
-        <div>
-      <div className="register-root">
-            <div className="user-pair">
-                <label>Username</label>
-                <input value={username} onChange={handleUsername} type="text" />
-            </div>
-            <div className="user-pair">
-                <label>Password</label>
-                <input value={password} onChange={handlePassword} type="password" />
-            </div>
-          
-            <div className="submit-register" onClick={handleSubmit}>LOGIN</div>
-        
+        <div className='home'>
+            <div className="register-root login-root">
+                <div>
+                <form onSubmit={handleSubmit}>
+                    <h2>Sign In</h2>
+           <div className="user-pair">
+             <label htmlFor='username'>Username</label>
+             <input value={username} name='username' onChange={handleUsername} type="text" />
+         </div>
+         <div className="user-pair"> 
+          <label htmlFor='password'>Password</label>
+             <input value={password} name='password' onChange={handlePassword} type="password" />
+         </div>
+       
+      <button className="submit-register" type='submit'>Sign In</button>
+         </form>
+         </div>
+      </div>
         </div>
-        </div>
-    )
+       )
 }
 
 export default Login;

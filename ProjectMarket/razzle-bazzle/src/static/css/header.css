@@ -1,9 +1,14 @@
-.nav-bar{
+/* .nav-bar{
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     font-family: 'Lato', sans-serif;
+    background: #F47B7B;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.37);
+    justify-content: center;
+    z-index: 9999;
 }
 
 .nav-bar ul{
@@ -12,6 +17,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 11px;
+    width: 80%;
+
 }
 
 ul a:first-child{
@@ -19,9 +27,69 @@ ul a:first-child{
     margin-left: 1em;
 }
 ul a{
-    font-size: 24px;
+    font-size: 1.6rem;
     margin-right: 3rem;
     margin-top: 16px;
     text-decoration:none;
-    color: black;
+    color: #EBF5EE;
+} */
+
+
+.nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 25px 0 25px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.hom-logo{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.nav-item{
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+} 
+
+.super-link{
+    color: #e0501b;
+}
+
+@media only screen and (max-width: 600px){
+    
+    .nav{
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px;
+        height: auto;
+        overflow-y: hidden;
+    }
+
+    .nav-logo{
+        font-size: 6vw;
+        margin-top: 10px;
+        margin-bottom: 14px;
+    }
+
+    .nav-item{
+        margin-right: 20px;
+        font-size: 12px;
+        
+    }
 }

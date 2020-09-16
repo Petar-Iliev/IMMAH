@@ -1,0 +1,176 @@
+.admin-root{
+
+}
+
+.pick-post-root{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 200px;
+
+}
+
+.pick{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    -webkit-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.29);
+-moz-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.29);
+box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.29);
+}
+
+.pick-buttons-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pick-button{
+    max-width: 80px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 500ms ease;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.29);
+    box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.29);
+}
+
+.pick-button:hover{
+    transform: scale(0.9);
+}
+
+.voting-me{
+    background: #06C4EF;
+}
+
+.pick-me{
+    background: #16DB93;
+}
+
+.delete-me{
+    background: #EE6C4D;
+}
+
+.confirm-root{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-action{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(237, 242, 239,0.9);
+    border-radius: 10px;
+}
+.confirm-buttons-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-buttons-holder div{
+    /* width: 100px;
+    height: 40px; */
+    padding: 25px;
+    padding-left: 43px;
+    padding-right: 43px;
+    margin: 50px;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 500ms ease;
+    -webkit-box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.29);
+    box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.29);
+}
+
+.confirm-buttons-holder div:hover{
+    transform: scale(0.9);
+}
+
+.show-info-pick{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 8%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.29);
+}
+.pick-info-container{
+    background: rgb(237, 242, 239,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+}
+.pick-info-links{
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-submit{
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom:30px;
+    border-radius: 10px;
+    background-color: rgb(22, 152, 115,0.8);
+    color: white;     
+    text-align: center;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.admin-submit:hover{
+    transform: scale(0.9);
+}
+
+.admin-comment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-comp-logo{
+ margin-top: 30px;
+ padding: 10px;
+ background: yellow;
+
+ padding-left: 80px;
+ padding-right: 80px;
+ padding-top: 30px;
+ padding-bottom: 30px;
+ background-color: rgb(212, 193, 236,0.5);
+ border-radius: 10px;
+ box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.37);
+ transition: all 500ms ease;
+ cursor: pointer;
+}
+
+.select-comp-logo:hover{
+    transform: scale(0.9);
+}

@@ -6,11 +6,15 @@ const Company = new mongoose.Schema({
         required:true,
      
     },
+    logo:{
+        type:String,
+        default:'NONE'
+    },
     link:{
         type:String,
         require:true,
     },
-    rating:Number,
+    rating:{type:Number,default:0},
     posts:[{type:mongoose.Schema.Types.ObjectId,ref:'Post'}]
 })
 

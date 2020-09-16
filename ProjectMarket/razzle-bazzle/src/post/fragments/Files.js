@@ -15,7 +15,7 @@ function Files({links,close}){
               <div className='close-btn top-right' onClick={handleModal}></div>
      
             {links.map((link,index)=><File key={index} url={link}/>)}
-            {links.map((link,index)=><File key={index} url={link}/>)}
+   
         </div>
     )
 }

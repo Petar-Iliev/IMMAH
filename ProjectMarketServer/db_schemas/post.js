@@ -31,6 +31,7 @@ const modelSchema = new mongoose.Schema({
     vote_stats:{
         type: Map,
         of:Boolean,
+        default:new Map()
     },
     voting_end_date:{
       type: Date
