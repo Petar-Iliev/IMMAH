@@ -1,9 +1,11 @@
 .home{
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-items: center;
- margin-top: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vw 0 10vw;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 
@@ -42,12 +44,14 @@ user-select: none;
 letter-spacing: 0.5px;
 margin: 0px;
 padding-bottom: 1.5rem;
+color: #EBF5EE;
 }
 
 .intro-p{
   font-size: 1.1em;
 margin: 0px;
 padding: 0px;
+color: #E9ECEA;
 }
 
 .intro-links{
@@ -55,14 +59,14 @@ padding: 0px;
 flex-direction: row;
 -moz-box-pack: start;
 justify-content: flex-start;
-margin-top: 1.25rem;
+margin-top: 2.9rem;
 }
 
 .intro-link{
   display: inline-flex;
 -moz-box-pack: center;
 justify-content: center;
-cursor: pointer;
+
 border-radius: 2px;
 padding: 0.375rem 1rem;
 min-width: 8rem;
@@ -70,10 +74,17 @@ background-color: transparent;
 margin-right: 35px;
 user-select: none;
 border: 1px solid ;
-transition: opacity 0.3s ease 0s;
+transition: all 0.2s ease;
 text-decoration: none;
 font-size: 1.1em;
 line-height: 1.5;
+color: #F47B7B;
+}
+
+.intro-link:hover{
+  background: #F47B7B;
+  border: 1px solid #F47B7B;
+  color: #EBF5EE;
 }
 
 .intro-heading2{

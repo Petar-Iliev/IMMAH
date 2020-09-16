@@ -12,22 +12,47 @@ function Header(){
     
 
     return(
-        <nav className="nav-bar">
-             <ul className="nav-ul">
-                 <Link to="/" className="nav-item">HOME</Link>
-                 <Link to="/posts" className="nav-item">POST</Link>
-                 {user !=null ?
-                <Link to='/' onClick={()=>setUser(null)}>Logout</Link>
-                :
-                <>
-                <Link to="/login" className="nav-item">LOGIN</Link>
-                <Link to="/register" className="nav-item">REGISTER</Link>
-                </>
-                }
-                
-             </ul>
-        </nav>
+      <div className='nav'>
+          <div className='hom-logo'>
+              <h4>IMMAH</h4>
+          </div>
+          <div className='nav-links'>
+          <Link to="/"  className="nav-item super-link">HOME</Link>
+         <Link to="/posts" className="nav-item">POSTS</Link>
+         <Link to='/companies' className='nav-item'>COMPANIES</Link>
+         {user !=null ?
+   <Link to='/' onClick={()=>setUser(null)}>Logout</Link>
+   :
+   <>
+   <Link to="/login" className="nav-item">LOGIN</Link>
+   <Link to="/register" className="nav-item">SIGN UP</Link>
+   </>
+}
+
+          </div>
+      </div>
     )
 }
 
 export default Header;
+
+
+
+
+
+{/* <nav className="nav-bar">
+<ul className="nav-ul">
+    <Link to="/" className="nav-item">HOME</Link>
+    <Link to="/posts" className="nav-item">POSTS</Link>
+    <Link to='/companies' className='nav-item'>COMPANIES</Link>
+    {user !=null ?
+   <Link to='/' onClick={()=>setUser(null)}>Logout</Link>
+   :
+   <>
+   <Link to="/login" className="nav-item">LOGIN</Link>
+   <Link to="/register" className="nav-item">SIGN UP</Link>
+   </>
+   }
+   
+</ul>
+</nav> */}

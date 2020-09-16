@@ -11,7 +11,7 @@
     padding:10px;
 }
 
-.arrows-holder{
+/* .arrows-holder{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,11 +22,13 @@
     border-radius: 50%;
     
     background:cadetblue;
-}
+} */
 
 
 .thumb-nail-wrapper{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(auto-fit,minmax(17rem,22rem));
+   
     gap: 50px;
 }

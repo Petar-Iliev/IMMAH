@@ -72,7 +72,7 @@ const user_login = async (req,res)=>{
 
 const user_find = async (req,res) =>{
     const username = req.query.username;
-    const user= await User.findOne({username:username})
+    const user= await User.findOne({username})
     .populate('roles')
    
     res.send({user});

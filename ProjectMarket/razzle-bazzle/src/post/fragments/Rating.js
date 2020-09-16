@@ -7,7 +7,7 @@ function Rating({rating}){
     return(
 
         <>
-        <div className="rating-point">
+        <div className="post-rated-points">
         <img src={angry}/>
         <span>{rating} / 5 </span>
         </div>
