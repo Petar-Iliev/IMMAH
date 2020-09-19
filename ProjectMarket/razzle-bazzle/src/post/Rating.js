@@ -5,14 +5,16 @@ import angry from '../static/svgs/emojis/angry.svg';
 
 
 const selectedAdClass = `selected-rating`
+
+import mote from '../emojis';
   
 function Rating(props){
     const emojis=[
-        {rate:"Bad",emoji:angry},
-        {rate:"Very Bad",emoji:angry},
-        {rate:"Don't try this at home",emoji:angry},
-        {rate:"Can't ask for any worser",emoji:angry},
-        {rate:"FFS",emoji:angry},
+        {rate:"Bad",emoji:mote[1]},
+        {rate:"Very Bad",emoji:mote[2]},
+        {rate:"Don't try this at home",emoji:mote[3]},
+        {rate:"Can't ask for any worser",emoji:mote[4]},
+        {rate:"FFS",emoji:mote[5]},
     ];
 
  function handleRate(index){

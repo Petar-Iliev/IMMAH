@@ -5,7 +5,7 @@ function CompanyHeader({name,link,created_on}){
 
     let date = new Date(created_on);
     let year = date.getUTCFullYear();
-    let month = date.getUTCMonth();
+    let month = date.getUTCMonth()+1;
     let day = date.getDate();
     
 

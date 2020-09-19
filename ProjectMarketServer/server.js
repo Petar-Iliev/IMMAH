@@ -11,7 +11,7 @@ cloudinary.config({
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
-
+const cookieParser = require('cookie-parser');
 const app = express();
 
 
@@ -25,6 +25,7 @@ const userRouter = require('./routes/user/userrouter');
 const companyRouter = require('./routes/comapny/companyrouter');
 const PORT = process.env.PORT || 8000;
 
+app.use(cookieParser())
 app.use(cors());
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
