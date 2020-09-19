@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import '../static/css/register.css';
 
 function Register() {
@@ -7,6 +8,15 @@ function Register() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [repeatPassword, setRepeatPassord] = useState('');
+
+    const [usernameVal,setUsernameVal] = useState(false);
+    const [usernameExVal,setUsernameExVal] = useState(false);
+    const [passVal,setPassVal] = useState(false);
+    const [repPassVal,setRepPassVal] = useState(false);
+
+    const [redirect,setRedirect] = useState(false);
+
+
 
     function handleUsername(e) {
         setUsername(e.target.value)
@@ -19,12 +29,50 @@ function Register() {
         setRepeatPassord(e.target.value)
     }
 
+
+    function validateProps(){
+        
+        let isValid=true;
+
+        if(  username.trim().length < 1 ){
+            setUsernameVal(true);
+            isValid=false;
+        }else{
+            setUsernameVal(false);
+        }
+
+        if(  password.trim().length < 6){
+            setPassVal(true);
+            isValid=false;
+        }else{
+            setPassVal(false);
+        }
+
+        if( password.trim() !== repeatPassword){
+            setRepPassVal(true);
+            isValid=false;
+        }else{
+            setRepPassVal(false);
+        }
+
+       
+        console.log(isValid);
+
+        return isValid
+
+    }
+
    async function handleSubmit(e) {
        e.preventDefault();
        console.log("SUB");
-       if(username.trim().length < 1 || password.trim().length < 6 || password.trim() !== repeatPassword){
-            alert("Invalid props");
-       }else{
+
+
+  
+
+       console.log(username,password);
+
+
+       if(validateProps()){
          const data= await fetch('http://localhost:8000/user/register',{
                method:"POST",
                headers:{
@@ -40,11 +88,20 @@ function Register() {
                console.error(err);
            })
 
-  
+           if(data.err){
+               setUsernameExVal(true);
+           }else{
+               setRedirect(true);
+           }
        }
     }
 
+    if(redirect){
+        return <Redirect to='/login'/>
+    }
+
     return(
+        
      <div className='home'>
          <div className="register-root">
              <div>
@@ -53,14 +110,20 @@ function Register() {
         <div className="user-pair">
           <label htmlFor='username'>Username</label>
           <input value={username} name='username' onChange={handleUsername} type="text" />
+          {usernameVal && <span className='validation-error'>Username must be atleast 1 character !</span>
+          }
+         {usernameExVal && <span className='validation-error'>Username already exist !</span>}
+        
       </div>
       <div className="user-pair"> 
        <label htmlFor='password'>Password</label>
           <input value={password} name='password' onChange={handlePassword} type="password" />
+          {passVal && <span className='validation-error'>Password must be atleast 6 characters !</span>}
       </div>
      <div className="user-pair">
           <label htmlFor='repeat-password'>Confirm password</label>
         <input value={repeatPassword} name='repeat-password' onChange={handleRepeatPassword} type="password" />
+        {repPassVal && <span className='validation-error'>Password does not match !</span>}
     </div>
    <button className="submit-register" type='submit'>Createa an Account</button>
       </form>

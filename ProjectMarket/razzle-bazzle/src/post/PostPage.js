@@ -38,12 +38,16 @@ function PostPage(){
 
     return(
         <div className="post-page-root">
-            <div className="create-post">
+
+            <div className='post-page-links'>
+            <div className="create-post-link">
              <Link to="/create/post">Create Post</Link>
             </div>
             <div className='votings-post-link'>
                 <Link to='/voting/posts'>VOTING</Link>
             </div>
+            </div>
+           
             <div className="thumb-nail-wrapper">
                 {posts.map((post,index)=><PostThumbNail username={post.author.username} logo={post.company.logo} key={index} companyName={post.company.name} rating={post.rating} post_id = {post._id} />)}
             </div>

@@ -15,6 +15,8 @@ import man from '../static/pngs/cherry-56.png';
 import robb from '../static/pngs/robb.png';
 import AuthContext from '../context/AuthContext';
 
+
+
 const imageSlides = [
     <SlideImage pic={man} />,
     <SlideImage pic={robb} />,
@@ -118,8 +120,8 @@ function CreatePost() {
     const slides = [
         <CompanyInfo companyName={companyName} companyLink={companyLink} handleCompanyName={handleCompanyName} handleCompanyLink={handleCompanyLink} />,
         <Ese text={ese} handleInput={handleEse} />,
-        <Rating selected={selectedRating} handleRating={handleRating} />,
         <Files files={files} handleFiles={handleFiles} />,
+        <Rating selected={selectedRating} handleRating={handleRating} />,
         <SubmitPost
             submit={submitPost}
             files={files}

@@ -27,6 +27,8 @@ import Footer from './home/Footer'
 
 import AuthContext from './context/AuthContext';
 
+import Contact from './Contact';
+
 function App(){
   
   const [user,setUser] = useState(null);
@@ -51,6 +53,7 @@ function App(){
     <Route path='/voting/posts' component={VotingPostsPage}/>
     <Route path='/companies' component={CompanyRoot}/>
     <Route path='/company/:id' component={CompanyPage}/>
+    <Route path='/contact' component={Contact}/>
 
   </Switch>
   <Footer/>

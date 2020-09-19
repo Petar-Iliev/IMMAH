@@ -35,8 +35,7 @@ const post_all_get = async (req, res) => {
     .exec(function (err, posts) {
 
 
-      console.log(posts.length);
-       console.log(posts);
+    
       if (err) {
         res.send(JSON.stringify({ err: "Something went wrong" }))
       } else {
@@ -117,11 +116,13 @@ const post_create_file = async (req, res) => {
 
     try {
       const uploadResponse = await cloudinary.uploader.upload(filePath, { resource_type: type });
-      console.log(uploadResponse);
+
+      
 
       //  let links = post.links;
       //  links.push(uploadResponse.url);
-      console.log(post);
+
+      
       post.links.push(uploadResponse.url);
       await post.save();
     } catch (err) {
@@ -133,7 +134,7 @@ const post_create_file = async (req, res) => {
 
 const post_find_by_id = async (req, res) => {
 
-  console.log(req.query.id);
+
   await Post.findById(req.query.id)
     .populate('company')
     .populate('author')
@@ -203,7 +204,7 @@ const get_votable_posts = async (req, res) => {
 
   const {user} = req.query;
 
-  console.log(user);
+
   
 await Post.find({ voting: true, voting_end_date: { $gt: Date.now() } }).populate('company')
   .exec(function(err,posts){
@@ -215,7 +216,6 @@ await Post.find({ voting: true, voting_end_date: { $gt: Date.now() } }).populate
     
       posts.forEach(p=>{
     
-      console.log(p.vote_stats.has(user));
       if(!p.vote_stats.has(user)){
         data.push(p);
       }
@@ -281,7 +281,8 @@ const get_picked_posts = async (req, res) => {
       model: 'Comment'
     }
   });
-  console.log(posts);
+
+  
   res.send(JSON.stringify(posts));
 }
 
@@ -378,7 +379,7 @@ const patch_admin_logo = async (req,res) =>{
   let post = await Post.findById(id).populate('company');
   if (post) {
 
-    console.log(post);
+   
     const filePath = req.files.file.tempFilePath;
     const mimeType = req.files.file.mimetype
     if (valid_img_mime_types.includes(mimeType)) {

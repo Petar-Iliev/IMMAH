@@ -16,15 +16,6 @@ const create_company = async ({companyName,companyLink}) =>{
     
     let {id} = req.query;
 
-    console.log("TEST");
-  
-    let test = await Company.findById(id).populate({
-        path:'posts',
-        sort:{'rating':1}
-    })
-
-    console.log(test);
-
     const company = await Company.findById(id).populate({
         path:'posts',
         populate:{
@@ -32,6 +23,7 @@ const create_company = async ({companyName,companyLink}) =>{
         }
     });
 
+    
     res.json(company);
  }
 

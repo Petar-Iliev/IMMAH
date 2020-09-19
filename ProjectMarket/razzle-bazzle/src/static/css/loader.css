@@ -1,0 +1,29 @@
+.loader{
+    z-index: 99999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 50px;
+    width: 4.4rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    animation: lastic 2s linear infinite;
+}
+
+.inner{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    font-size: 26px;
+}
+
+
+@keyframes lastic{
+
+    80%{
+        width: 9rem;
+    }
+}

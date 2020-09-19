@@ -21,7 +21,7 @@ function Header(){
          <Link to="/posts" className="nav-item">POSTS</Link>
          <Link to='/companies' className='nav-item'>COMPANIES</Link>
          {user !=null ?
-   <Link to='/' onClick={()=>setUser(null)}>Logout</Link>
+   <Link to='/' className='nav-item' onClick={()=>setUser(null)}>LOGOUT</Link>
    :
    <>
    <Link to="/login" className="nav-item">LOGIN</Link>
